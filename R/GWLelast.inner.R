@@ -28,7 +28,7 @@ GWLelast.inner = function(x=x, y = y, coords = coords, W = W, lambda = lambda, a
     xi = as.matrix(x[-i,])
     yi = as.matrix(y[-i])
 
-    model[[i]] = glmnet(x = xi, y = yi, weights = w, family = "binomial", alpha = alpha, nlambda = nlambda, lambda = lambda)
+    model[[i]] = glmnet(x = xi, y = yi, weights = w, family = "gaussian", alpha = alpha, nlambda = nlambda, lambda = lambda)
     predictions = predict(model, newx = t(x[i,]), type = "class")
     error[[i]] = abs(as.numeric(predictions) - y[i])
 
