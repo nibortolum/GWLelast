@@ -20,7 +20,7 @@ GWLelast.inner = function(x=x, y = y, coords = coords, W = W, lambda = lambda, a
 
   model = list()
   cv.error = list()
-  GWLelast.inner = list()
+  GWLelasta.inner = list()
 
   for(i in 1:dim(x)[1]){
     w = W[i, -i]
@@ -34,8 +34,8 @@ GWLelast.inner = function(x=x, y = y, coords = coords, W = W, lambda = lambda, a
 
   }
 
-  GWLelast.inner[["model"]] = model
-  GWLelast.inner[["error"]] = error
+  GWLelasta.inner[["model"]] = model
+  GWLelasta.inner[["error"]] = error
 
-  return(GWLelast.inner)
+  return(GWLelasta.inner)
 }
